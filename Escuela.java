@@ -20,6 +20,7 @@ public class Escuela {
         }
         return null;
     }
+    
 
     public void mostrarAlumnos() {
         for (int i = 0; i < contador; i++) {
