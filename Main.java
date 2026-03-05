@@ -1,7 +1,5 @@
-import java.util.Scanner;
 public class Main{
     public static void main (String [] args){
-        sc Scanner = new Scanner(System.in);
         
         PedirDato pedir = new PedirDato();
         Escuela escuela = new Escuela();
@@ -33,13 +31,14 @@ public class Main{
             break;
             case 2:
                 String mat = pedir.pedirCadena("Buscar por matricula");
-                    Alumno buscar = escuela.buscarAlumno();
+                
+                Alumno buscar = escuela.buscarAlumno(mat);
 
-                    if (buscar != null) {
-                        buscar.mostrarAlumno();
-                    } else {
-                        System.out.println("Matricula inexistente");
-                    }
+                if (buscar != null) {
+                buscar.mostrarAlumno();
+                } else {
+                System.out.println("Matricula inexistente");
+                }
             break;
             case 3:
                   escuela.mostrarAlumnos();
